@@ -1,8 +1,6 @@
 name: Deploy to Surge
 on:
-  push:
-    branches:
-      - dev
+  workflow_dispatch
 jobs:
   deploy:
     environment: production

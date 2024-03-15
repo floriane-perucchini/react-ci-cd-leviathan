@@ -26,7 +26,7 @@ jobs:
       - name: Generate artifact
         uses: actions/upload-artifact@v3
         with:
-          name: build artifact
+          name: build
           path: ./dist
   
   deploy:
@@ -41,4 +41,4 @@ jobs:
       - name: Deploy to GitHub Pages
         uses: actions/deploy-pages@v4
         with:
-          artifact_name: build artifact
+          artifact_name: build

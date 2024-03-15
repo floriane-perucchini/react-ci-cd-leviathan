@@ -24,7 +24,7 @@ jobs:
       - name: Build 
         run: npm run build
       - name: Generate artifact
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-pages-artifact@v3
         with:
           name: build
           path: ./dist

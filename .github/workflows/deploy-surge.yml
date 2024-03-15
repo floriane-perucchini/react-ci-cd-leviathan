@@ -1,6 +1,8 @@
 name: Deploy to Surge
 on:
-  workflow_dispatch
+  push:
+    branches:
+      - dev
 jobs:
   deploy:
     environment: production
@@ -19,4 +21,4 @@ jobs:
       - name: Deploy to Surge
         run: | 
           npm install -g surge
-          surge ./dist --domain ${{ secrets.SURGE_DOMAIN }} --token ${{ secrets.SURGE_TOKEN }}
+          surge ./dist --domain ${{ secrets.SURGE_DOMAIN }} --token ${{ secrets.SURGE_TOKEN}}
